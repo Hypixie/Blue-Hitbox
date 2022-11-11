@@ -1,1 +1,23 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v10,v11)local v12=0;local v13;while true do if (v12==1) then return v5(v13);end if (v12==0) then v13={};for v16=1, #v10 do v6(v13,v0(v4(v1(v2(v10,v16,v16 + ((4 + 0) -3))),v1(v2(v11,1 + 0 + 0 + 0 + ((v16-(139 -(98 + 40)))% #v11),(1162 -(1128 + 33)) + ((v16-1)% #v11) + 1 + 0)))%((5304 -3265) -(69 + 441 + (2611 -(953 + 385))))));end v12=1;end end end _G.v8=9 + 11;_G.v9=true;game:GetService(v7("\181\177\202\239\146\160\217\218\147\172","\230\197\171\157")):SetCore(v7("\26\118\241\137\7\124\235\132\47\122\252\140\61\122\240\131","\73\19\159\237"),{[v7("\66\166\105\48\0","\22\207\29\92\101\26")]=v7("\138\94\233\244\173\79\189\192\167\69\238\255\173\89\189\212\135\99\220","\194\55\157\150"),[v7("\96\76\251\88","\52\41\131\44")]=v7("\246\1\236\201\76\228\17\180\232\80","\148\120\204\129\53"),[v7("\99\193\77\185","\42\162\34\215\116\135\128")]=v7("\43\162\183\211\49\181\162\197\99\239\224\211\32\176\170\154\24\179\188\194\45\230\166\195\100\241\247\158\104\243\250\150\107\248\252\129\46\253\254\146\105\230\167\154\104\245\255","\89\192\207\167")});Duration=(48 -36) -7;game:GetService(v7("\216\87\74\27\165\176\252\75\71\45","\138\34\36\72\192\194")).RenderStepped:connect(function()if _G.v9 then for v14,v15 in next,game:GetService(v7("\79\254\250\188\163\58\100","\31\146\155\197\198\72\23\30")):GetPlayers() do if (v15.Name~=game:GetService(v7("\49\187\24\212\190\52\27","\97\215\121\173\219\70\104")).LocalPlayer.Name) then pcall(function()local v17=679 -(101 + 578);local v18;while true do if (v17==(283 -(114 + 169))) then v18=0;while true do if (v18==(894 -(135 + 758))) then local v19=0;local v20;while true do if (v19==0) then v20=(2491 -1782) -(31 + 60 + (2039 -1421));while true do if (v20==((607 -(102 + 3)) -((724 -(208 + 112)) + 98))) then local v25=0;while true do if (v25==0) then v15.Character.HumanoidRootPart.BrickColor=BrickColor.new(v7("\100\14\238\205\74\87\22\9\227\212\67","\54\107\143\161\38\46"));v15.Character.HumanoidRootPart.Material=v7("\156\161\20\6","\210\196\123\104\230\101\153");v25=1;end if (v25==1) then v20=1756 -(758 + 997);break;end end end if ((1 + 0)==v20) then v18=(4527 -2842) -(585 + 1098);break;end end break;end end end if (v18==0) then local v21=346 -(129 + 217);while true do if (v21==(0 + 0)) then v15.Character.HumanoidRootPart.v23=Vector3.new(_G.v8,_G.v8,_G.v8);v15.Character.HumanoidRootPart.v24=0.7;v21=1 -0;end if (v21==(863 -(459 + 403))) then v18=1395 -(823 + (1125 -554));break;end end end if (v18==2) then v15.Character.HumanoidRootPart.v22=false;break;end end break;end end end);end end end end);
+_G.HeadSize = 20
+_G.Disabled = true
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Hitbox Version BETA";
+	Text = "by Hypixie";
+	Icon = "rbxthumb://type=Asset&id=1891351283&w=150&h=150"})
+Duration = 5;
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
